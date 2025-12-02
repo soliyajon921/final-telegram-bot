@@ -1,1 +1,1 @@
-console.log("bot ishga tushdi");
+console.log("Dastur ishlayapti...");
