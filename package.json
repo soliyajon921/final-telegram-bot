@@ -1,0 +1,29 @@
+{
+  "name": "final-telegram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soliyajon921/final-telegram-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soliyajon921/final-telegram-bot/issues"
+  },
+  "homepage": "https://github.com/soliyajon921/final-telegram-bot#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "node-telegram-bot-api": "^0.66.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
