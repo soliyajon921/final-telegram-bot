@@ -1,5 +1,4 @@
-import"./src/bot.js";
-console.log("bot ishga tushdi...");
+
 import TelegramBot from "node-telegram-bot-api";
 import { config } from "dotenv";
 import onError from "./handlers/onError.js";

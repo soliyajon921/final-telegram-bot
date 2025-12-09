@@ -1,6 +1,7 @@
 import { bot } from "../bot.js";
 
 function onProfile(msg) {
+     const chatId = msg.chat.id;
   bot.sendMessage(
     chatId,
     `
