@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev":"nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
   "homepage": "https://github.com/soliyajon921/final-telegram-bot#readme",
   "dependencies": {
     "dotenv": "^17.2.3",
+    "mongoose": "^9.0.1",
+    "mongose": "^0.0.2-security",
     "node-telegram-bot-api": "^0.66.0"
   },
   "devDependencies": {
