@@ -4,6 +4,8 @@ import { config } from "dotenv";
 import onError from "./handlers/onError.js";
 import onProfile from "./handlers/onProfile.js";
 import onStart from "./handlers/onStart.js";
+import { onCourses } from "./handlers/onCourses.js";
+
 
 
 config();
@@ -70,10 +72,10 @@ bot.on("message", async (msg) => {
 
     if (text == "/start") {
         return onStart(msg);
-    }
-
-    if (text == "/profile") {
+    } else if (text == "/profile") {
         return onProfile(msg);
+    } else if (text == "📚 Kurslar") {
+        return onCourses(msg)
     }
 
     return onError(msg);
@@ -100,6 +102,54 @@ bot.on("callback_query", async (query) => {
             return onStart(msg);
         }
     }
+    if (data == "course_english") {
+        bot.sendMessage(chatId, `
+     🇬🇧 Ingliz tili kursi haqida:
+
+📆 Davomiyligi: 3 oy  
+⏰ Darslar: Haftasiga 3 marta (1,5 soatdan)  
+👨‍🏫 O‘qituvchi: Tajribali filologlar  
+💰 Narxi: 350 000 so‘m / oy
+
+✍️ Agar sizni bu kurs qiziqtirsa, “Ro‘yxatdan o‘tish” tugmasini bosing.
+ `,
+
+        );
+    } else if (data == "course_russian") {
+        bot.sendMessage(chatId,
+            ` 🇬🇧 Rustili tili kursi haqida:
+
+📆 Davomiyligi: 3 oy  
+⏰ Darslar: Haftasiga 3 marta (1,5 soatdan)  
+👨‍🏫 O‘qituvchi: Tajribali filologlar  
+💰 Narxi: 350 000 so‘m / oy
+
+✍️ Agar sizni bu kurs qiziqtirsa, “Ro‘yxatdan o‘tish” tugmasini bosing.
+            `)
+    } else if (data == "course_math"){
+        bot.sendMessage(chatId,
+            `🇬🇧 Matematika kursi haqida:
+
+📆 Davomiyligi: 3 oy  
+⏰ Darslar: Haftasiga 3 marta (1,5 soatdan)  
+👨‍🏫 O‘qituvchi: Tajribali filologlar  
+💰 Narxi: 350 000 so‘m / oy
+
+✍️ Agar sizni bu kurs qiziqtirsa, “Ro‘yxatdan o‘tish” tugmasini bosing.`
+        )
+    }else if (data=="course_programming"){
+        bot.sendMessage(chatId,
+            `🇬🇧 Dasturlash kursi haqida:
+
+📆 Davomiyligi: 3 oy  
+⏰ Darslar: Haftasiga 3 marta (1,5 soatdan)  
+👨‍🏫 O‘qituvchi: Tajribali filologlar  
+💰 Narxi: 350 000 so‘m / oy
+
+✍️ Agar sizni bu kurs qiziqtirsa, “Ro‘yxatdan o‘tish” tugmasini bosing.`
+        )
+    }
+
 });
 
 console.log("Bot ishga tushdi...");
