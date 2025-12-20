@@ -5,6 +5,7 @@ import onError from "./handlers/onError.js";
 import onProfile from "./handlers/onProfile.js";
 import onStart from "./handlers/onStart.js";
 import { onCourses } from "./handlers/onCourses.js";
+import { onLocation } from "./handlers/onLocation.js";
 
 
 
@@ -76,6 +77,8 @@ bot.on("message", async (msg) => {
         return onProfile(msg);
     } else if (text == "📚 Kurslar") {
         return onCourses(msg)
+    }else if (text == "ℹ️ Markaz haqida"){
+        return onLocation(msg);
     }
 
     return onError(msg);
@@ -146,9 +149,10 @@ bot.on("callback_query", async (query) => {
 👨‍🏫 O‘qituvchi: Tajribali filologlar  
 💰 Narxi: 350 000 so‘m / oy
 
-✍️ Agar sizni bu kurs qiziqtirsa, “Ro‘yxatdan o‘tish” tugmasini bosing.`
+✍️ Agar sizni bu kurs qiziqtirsa, “Ro‘yxatdan o‘tish” tugmasini bosing bizning...`
         )
     }
+    
 
 });
 

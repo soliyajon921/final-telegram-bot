@@ -26,8 +26,8 @@ Quyidagi menyudan kerakli bo‘limni tanlang 👇
       reply_markup: {
         keyboard: [
           [{ text: "📚 Kurslar" }, { text: "✍️ Ro‘yxatdan o‘tish" }],
-          [{ text: "ℹ️ Markaz haqida" }, { text: "💬 Fikr bildirish" }],
-          [{ text: "❓ Yordam" }],
+          [{ text: "ℹ️ Markaz haqida" },]
+         
         ],
         resize_keyboard: true,
       },
